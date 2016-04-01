@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="Particulate"
+	id="org.libcinder.particulate"
+	>
+	<headerPattern>include/particulate/*.hpp</headerPattern>
+	<includePath system="true">include</includePath>
+</block>
+</cinder>
