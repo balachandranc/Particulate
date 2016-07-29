@@ -30,6 +30,12 @@
 #include <vector>
 #include <string>
 
+#ifndef assert
+#ifdef _WIN32
+#define assert(x) _ASSERT(x)
+#endif
+#endif
+
 namespace particulate { namespace rle {
 	
 	template <typename Tp>
