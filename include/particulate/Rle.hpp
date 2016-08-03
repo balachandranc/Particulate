@@ -30,6 +30,12 @@
 #include <vector>
 #include <string>
 
+#ifndef assert
+#ifdef _WIN32
+#define assert(x) _ASSERT(x)
+#endif
+#endif
+
 namespace particulate { namespace rle {
 	
 	template <typename Tp>
@@ -59,7 +65,7 @@ namespace particulate { namespace rle {
 		mFh( f ),
 		mLen( 0 ),
 		mCount( 0 ),
-		mValue( std::numeric_limits<size_t>::max() )
+		mValue( (std::numeric_limits<size_t>::max)() )
 		{
 			mFh.seekp( 0, std::ios::beg );
 			write_to_stream( mFh, mLen );
